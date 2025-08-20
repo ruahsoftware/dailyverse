@@ -1,0 +1,28 @@
+Política de Privacidad de DailyVerse
+
+Última actualización: [19-08-2025]
+
+DailyVerse respeta y protege la privacidad de sus usuarios. Esta aplicación no recopila, almacena ni comparte información personal de los usuarios con terceros.
+
+1. Información recolectada
+- DailyVerse no solicita ni recopila datos personales (como nombre, correo electrónico, número de teléfono, etc.).
+- Todo el contenido que el usuario crea (favoritos, notas personales, configuraciones) se guarda únicamente en el almacenamiento interno del dispositivo.
+
+2. Uso de la información
+- La información guardada en la app (notas, favoritos) es utilizada únicamente por el propio usuario y no es accesible para DailyVerse ni para terceros.
+
+3. Permisos de la aplicación
+- La app puede solicitar permisos para notificaciones y acceso a almacenamiento interno con el único fin de guardar notas y favoritos en el dispositivo.
+- La app no utiliza estos permisos para ningún otro propósito.
+
+4. Compartir información
+- DailyVerse no comparte ningún dato de usuario con terceros.
+- Al usar la función de compartir, el contenido que el usuario seleccione (versículos o imágenes) será enviado únicamente a través de las apps de redes sociales que el usuario decida utilizar.
+
+5. Seguridad
+- Toda la información guardada en el dispositivo se mantiene de manera local y segura.
+
+6. Contacto
+Si tienes preguntas sobre esta política de privacidad, puedes escribirnos a:
+[ruahsoftware@gmail.com]
+
