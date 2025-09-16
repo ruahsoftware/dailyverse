@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - DailyVerse</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        .highlight {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .contact-info {
+            background: #f1f8e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Privacy Policy</h1>
+        
+        <div class="highlight">
+            <strong>Last update:</strong> 2025-08-20
+        </div>
+
+        <p>At <strong>RuahSoft</strong>, developers of <strong>DailyVerse</strong>, we respect and protect your privacy. We want to make it clear that <strong>our app does not collect, store, process, or share any kind of personal or usage information from users</strong>. Everything you do in the app remains exclusively on your own device.</p>
+
+        <div class="highlight">
+            <h2>🛡️ CHILDREN’S PRIVACY - COPPA & GDPR</h2>
+            <p><strong>DailyVerse is safe for the entire family, including children under the age of 13.</strong></p>
+            <ul>
+                <li><strong>We DO NOT collect any personal information</strong> from children (or adults).</li>
+                <li><strong>We DO NOT display targeted ads</strong> or use data for marketing.</li>
+                <li><strong>We DO NOT sell or share</strong> information with third parties.</li>
+                <li><strong>No parental actions are required</strong> since no data collection takes place at any time.</li>
+            </ul>
+        </div>
+
+        <h2>1. Information We Collect</h2>
+        <p><strong>We do not collect any kind of personal or technical information from users.</strong> All content you create (notes, saved verses, preferences, etc.) stays only on your device’s internal storage.</p>
+
+        <h2>2. How We Use Information</h2>
+        <p>Since we do not collect any information, we do not use or process user data in any way. All app functionality runs locally on your device.</p>
+
+        <h2>3. Third-Party Services</h2>
+        <p>DailyVerse does not use third-party services that collect data. The app does not sync with external servers or cloud databases.</p>
+
+        <h2>4. Data Security</h2>
+        <p>All data created within the app remains under the user’s exclusive control on their own device. When you uninstall the app, all information is automatically deleted.</p>
+
+        <h2>5. Your Rights</h2>
+        <p>Since we do not collect or process personal data, there is no need to exercise rights of access, rectification, or deletion. All information is fully controlled by the user on their device.</p>
+
+        <h2>6. Parents’ Rights (COPPA)</h2>
+        <div class="highlight">
+            <p><strong>We do not collect data from children.</strong> Therefore, there is no information for parents to review, modify, or delete. DailyVerse is designed to ensure total privacy.</p>
+        </div>
+
+        <h2>7. GDPR Compliance (Users under 16 in the EU)</h2>
+        <p>No personal data from minors or adults is processed in the European Union or in any other territory. The app complies with GDPR by not requiring any data collection at all.</p>
+        
+        <h2>8. Changes to this Policy</h2>
+        <p>We may occasionally update this policy for clarity, but the foundation will remain the same: <strong>we do not collect any data of any kind</strong>.</p>
+
+        <h2>9. Additional Information</h2>
+        <p><strong>Local Storage:</strong> All data (such as personal notes, saved verses, bookmarks, and preferences) is stored exclusively on the device using internal storage. The app does not transmit or share this information with third parties. You have full control over your data, which is automatically deleted when the app is uninstalled.</p>
+
+        <div class="contact-info">
+            <h2>10. Contact</h2>
+            <p>If you have any questions about this privacy policy, you can contact us at:</p>
+            <p><strong>Email:</strong> ruahsoftware@gmail.com</p>
+            <p><strong>Website:</strong> https://ruahsoftware.github.io/site</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2025 RuahSoft. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
