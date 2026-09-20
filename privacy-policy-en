@@ -32,10 +32,23 @@
             margin-bottom: 15px;
             font-size: 1.3em;
         }
+        h3 {
+            color: #34495e;
+            margin-top: 18px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
         .highlight {
             background: #e3f2fd;
             padding: 15px;
             border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
             margin: 20px 0;
             border-radius: 4px;
         }
@@ -44,6 +57,21 @@
             padding: 20px;
             border-radius: 8px;
             margin: 20px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px 10px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+            vertical-align: top;
+        }
+        th {
+            background: #f1f3f5;
         }
         ul {
             padding-left: 20px;
@@ -64,62 +92,103 @@
 <body>
     <div class="container">
         <h1>Privacy Policy</h1>
-        
-        <div class="highlight">
-            <strong>Last update:</strong> 2025-08-20
-        </div>
-
-        <p>At <strong>RuahSoft</strong>, developers of <strong>DailyVerse</strong>, we respect and protect your privacy. We want to make it clear that <strong>our app does not collect, store, process, or share any kind of personal or usage information from users</strong>. Everything you do in the app remains exclusively on your own device.</p>
 
         <div class="highlight">
-            <h2>🛡️ CHILDREN’S PRIVACY - COPPA & GDPR</h2>
-            <p><strong>DailyVerse is safe for the entire family, including children under the age of 13.</strong></p>
-            <ul>
-                <li><strong>We DO NOT collect any personal information</strong> from children (or adults).</li>
-                <li><strong>We DO NOT display targeted ads</strong> or use data for marketing.</li>
-                <li><strong>We DO NOT sell or share</strong> information with third parties.</li>
-                <li><strong>No parental actions are required</strong> since no data collection takes place at any time.</li>
-            </ul>
+            <strong>Last updated:</strong> September 20, 2026
         </div>
 
-        <h2>1. Information We Collect</h2>
-        <p><strong>We do not collect any kind of personal or technical information from users.</strong> All content you create (notes, saved verses, preferences, etc.) stays only on your device’s internal storage.</p>
+        <p>At <strong>RuahSoft</strong>, developers of <strong>DailyVerse</strong>, we respect and protect your privacy. Most of the app (daily verse, personal notes, saved verses, challenges, personal finance tracking, and preferences) works <strong>completely offline</strong>, and that data never leaves your device.</p>
 
-        <h2>2. How We Use Information</h2>
-        <p>Since we do not collect any information, we do not use or process user data in any way. All app functionality runs locally on your device.</p>
+        <p>However, DailyVerse includes a section called <strong>"Community"</strong>, a public prayer wall where users can post prayer requests, comments, and testimonies visible to other people in the community. To post or comment in Community, you must sign in with a WordPress.com account, and that content — along with the data needed to moderate it — <strong>is processed on external servers</strong>. This policy explains clearly what happens in each case.</p>
 
-        <h2>3. Third-Party Services</h2>
-        <p>DailyVerse does not use third-party services that collect data. The app does not sync with external servers or cloud databases.</p>
-
-        <h2>4. Data Security</h2>
-        <p>All data created within the app remains under the user’s exclusive control on their own device. When you uninstall the app, all information is automatically deleted.</p>
-
-        <h2>5. Your Rights</h2>
-        <p>Since we do not collect or process personal data, there is no need to exercise rights of access, rectification, or deletion. All information is fully controlled by the user on their device.</p>
-
-        <h2>6. Parents’ Rights (COPPA)</h2>
         <div class="highlight">
-            <p><strong>We do not collect data from children.</strong> Therefore, there is no information for parents to review, modify, or delete. DailyVerse is designed to ensure total privacy.</p>
+            <h2>📋 Quick summary</h2>
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>Where does your data live?</th>
+                </tr>
+                <tr>
+                    <td>Daily verse, notes, saved verses, challenges, personal finance tracking, preferences</td>
+                    <td>Only on your device. Never sent to any server.</td>
+                </tr>
+                <tr>
+                    <td>Community (posting, commenting, praying for someone)</td>
+                    <td>Requires a WordPress.com account. Content is published to a WordPress.com blog, and some moderation data is stored on our backend (Cloudflare Workers).</td>
+                </tr>
+            </table>
         </div>
 
-        <h2>7. GDPR Compliance (Users under 16 in the EU)</h2>
-        <p>No personal data from minors or adults is processed in the European Union or in any other territory. The app complies with GDPR by not requiring any data collection at all.</p>
-        
-        <h2>8. Changes to this Policy</h2>
-        <p>We may occasionally update this policy for clarity, but the foundation will remain the same: <strong>we do not collect any data of any kind</strong>.</p>
+        <h2>1. Data we do NOT collect</h2>
+        <p>Outside of the Community section, DailyVerse does not collect, store in the cloud, process, or share any personal data. We don't use advertising, we don't use third-party analytics or crash-reporting tools, we don't send push notifications, and the app has no purchases or subscriptions. Any content you create outside of Community (notes, saved verses, preferences, challenge progress, personal finance records, etc.) is kept only in your device's internal storage, and is automatically deleted when you uninstall the app.</p>
 
-        <h2>9. Additional Information</h2>
-        <p><strong>Local Storage:</strong> All data (such as personal notes, saved verses, bookmarks, and preferences) is stored exclusively on the device using internal storage. The app does not transmit or share this information with third parties. You have full control over your data, which is automatically deleted when the app is uninstalled.</p>
+        <h2>2. Data we do process — only within Community</h2>
+        <p>The data below is only generated if you choose to sign in and take part in Community. If you never use this section, nothing in this part applies to you.</p>
+
+        <h3>2.1 Account and identity</h3>
+        <ul>
+            <li><strong>WordPress.com account:</strong> to post or comment, you sign in with a WordPress.com account (your own, free of charge). We never see or store your password — authentication is handled directly by WordPress.com.</li>
+            <li><strong>User ID and username:</strong> once you sign in, we store the WordPress.com user ID and username linked to your account, so we can correctly attribute your posts, enforce daily usage limits, and moderate your activity if needed.</li>
+        </ul>
+
+        <h3>2.2 Content you post</h3>
+        <ul>
+            <li>Prayer requests, comments, and testimonies you post in Community are stored on a WordPress.com blog (owned by Automattic Inc.) and are <strong>publicly visible</strong> to other people in the app's community.</li>
+            <li>Please do not post sensitive information you don't want made public (other people's full names, addresses, phone numbers, etc.) — our Community Guidelines explicitly ask you to avoid this.</li>
+        </ul>
+
+        <h3>2.3 Moderation and safety</h3>
+        <p>To keep Community a safe space, our backend (hosted on Cloudflare Workers, with storage in Cloudflare KV) temporarily stores:</p>
+        <ul>
+            <li>Content reports: who reported what, and why — used only so an administrator can review the case.</li>
+            <li>A list of accounts blocked for violating the community guidelines.</li>
+            <li>A daily count of posts/comments per user, to prevent spam.</li>
+            <li>An internal mapping that links each post to the real ID of whoever wrote it (since posts are technically published through a shared administrator account), used solely so moderation can be applied precisely.</li>
+        </ul>
+        <p>This moderation data is kept only as long as needed (some entries automatically expire after 30 days; account blocks remain in place until an administrator reverses them) and is not used for advertising purposes, sold, or shared with any third party other than those named in this policy.</p>
+
+        <h3>2.4 Local "muting"</h3>
+        <p>In addition to the blocking an administrator can apply, any user can "mute" another author within Community. This feature is <strong>purely local</strong>: your list of muted people is stored only on your own device, is never sent to our servers, and the muted person is never notified.</p>
+
+        <h2>3. Third-party services involved</h2>
+        <ul>
+            <li><strong>WordPress.com / Automattic Inc.:</strong> handles sign-in and hosts Community's public content. We recommend reviewing <a href="https://automattic.com/privacy/" target="_blank" rel="noopener">Automattic's privacy policy</a>.</li>
+            <li><strong>Cloudflare, Inc.:</strong> hosts our backend (Cloudflare Workers and KV), which processes and stores the moderation data described in section 2.3, acting as our infrastructure provider.</li>
+        </ul>
+        <p>We do not share your data with any other third party, use it for advertising, or sell it.</p>
+
+        <h2>4. Data security</h2>
+        <p>We apply reasonable measures to protect the information processed within Community, including encrypted communication (HTTPS) with our backend and with WordPress.com. No system is 100% foolproof, but we never store passwords or any kind of financial or payment data.</p>
+
+        <h2>5. Your rights</h2>
+        <ul>
+            <li>You can delete any of your own posts or comments directly from the app.</li>
+            <li>You can stop using Community at any time without affecting the rest of the app, which keeps working 100% offline.</li>
+            <li>You can request that we delete your account and Community-related data by writing to the email address listed at the end of this policy.</li>
+            <li>When you uninstall the app, all content stored locally on your device is automatically deleted (this does not include content you've already made public in Community, which remains until you delete it or we remove it at your request).</li>
+        </ul>
+
+        <div class="warning">
+            <h2>🛡️ Children and Community</h2>
+            <p>The features that don't require an account (daily verse, notes, saved verses, personal challenges, personal finance tracking) are safe for the whole family, including children under 13, since they collect no data and run entirely on the device.</p>
+            <p><strong>The Community section is not directed at children under 13.</strong> Signing in to Community requires a WordPress.com account, and WordPress.com/Automattic requires users to be at least 13 years old to create one. As a result, we do not knowingly collect data from children under 13 through Community. If a parent or guardian believes a child under 13 has created an account and posted in Community, please contact us to request that the account and its content be removed.</p>
+        </div>
+
+        <h2>6. Users in the European Union (GDPR)</h2>
+        <p>If you are located in the European Union and use Community, the data described in Section 2 is processed based on your consent (given when you sign in and post) and on our legitimate interest in keeping the community safe and free of spam or abuse. You may exercise your rights of access, rectification, erasure, or objection by writing to our contact email.</p>
+
+        <h2>7. Changes to this policy</h2>
+        <p>We may update this policy as the app adds new features. If changes are significant, we will update the date at the top of this document and, where appropriate, notify you within the app.</p>
 
         <div class="contact-info">
-            <h2>10. Contact</h2>
-            <p>If you have any questions about this privacy policy, you can contact us at:</p>
+            <h2>8. Contact</h2>
+            <p>If you have questions about this privacy policy, or want to request deletion of your account or Community content, contact us at:</p>
             <p><strong>Email:</strong> ruahsoftware@gmail.com</p>
             <p><strong>Website:</strong> https://ruahsoftware.github.io/site</p>
         </div>
 
         <div class="footer">
-            <p>© 2025 RuahSoft. All rights reserved.</p>
+            <p>© 2026 RuahSoft. All rights reserved.</p>
         </div>
     </div>
 </body>
