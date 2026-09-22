@@ -94,7 +94,7 @@
         <h1>Privacy Policy</h1>
 
         <div class="highlight">
-            <strong>Last updated:</strong> September 20, 2026
+            <strong>Last updated:</strong> September 22, 2026
         </div>
 
         <p>At <strong>RuahSoft</strong>, developers of <strong>DailyVerse</strong>, we respect and protect your privacy. Most of the app (daily verse, personal notes, saved verses, challenges, personal finance tracking, and preferences) works <strong>completely offline</strong>, and that data never leaves your device.</p>
@@ -162,29 +162,31 @@
 
         <h2>5. Your rights</h2>
         <ul>
-            <li>You can delete any of your own posts or comments directly from the app.</li>
+            <li>You can delete any of your own posts or comments directly from the app, at any time.</li>
             <li>You can stop using Community at any time without affecting the rest of the app, which keeps working 100% offline.</li>
-            <li>You can request that we delete your account and Community-related data by writing to the email address listed at the end of this policy.</li>
-            <li>When you uninstall the app, all content stored locally on your device is automatically deleted (this does not include content you've already made public in Community, which remains until you delete it or we remove it at your request).</li>
+            <li><strong>You can delete your account and all Community-related data yourself, instantly, right from the app</strong>: sign in, go to the Community tab, tap the "⋮" menu at the top, and select "Delete account". This immediately removes all your posts and comments, and signs you out. See the full detail of what gets deleted (and what doesn't) on our <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">account deletion page</a>.</li>
+            <li>If for any reason you can't use that button, you can also request deletion by writing to the email address listed at the end of this policy.</li>
+            <li>When you uninstall the app, all content stored locally on your device is automatically deleted (this does not include content you've already made public in Community, which remains until you delete it yourself with the button described above, or until it expires on its own 24 hours after being posted).</li>
         </ul>
 
         <div class="warning">
             <h2>🛡️ Children and Community</h2>
             <p>The features that don't require an account (daily verse, notes, saved verses, personal challenges, personal finance tracking) are safe for the whole family, including children under 13, since they collect no data and run entirely on the device.</p>
-            <p><strong>The Community section is not directed at children under 13.</strong> Signing in to Community requires a WordPress.com account, and WordPress.com/Automattic requires users to be at least 13 years old to create one. As a result, we do not knowingly collect data from children under 13 through Community. If a parent or guardian believes a child under 13 has created an account and posted in Community, please contact us to request that the account and its content be removed.</p>
+            <p><strong>The Community section is not directed at children under 13.</strong> Signing in to Community requires a WordPress.com account, and WordPress.com/Automattic requires users to be at least 13 years old to create one. As a result, we do not knowingly collect data from children under 13 through Community. If a parent or guardian believes a child under 13 has created an account and posted in Community, they can use the "Delete account" button described in section 5 from the child's device, or contact us to request that the account and its content be removed.</p>
         </div>
 
         <h2>6. Users in the European Union (GDPR)</h2>
-        <p>If you are located in the European Union and use Community, the data described in Section 2 is processed based on your consent (given when you sign in and post) and on our legitimate interest in keeping the community safe and free of spam or abuse. You may exercise your rights of access, rectification, erasure, or objection by writing to our contact email.</p>
+        <p>If you are located in the European Union and use Community, the data described in Section 2 is processed based on your consent (given when you sign in and post) and on our legitimate interest in keeping the community safe and free of spam or abuse. You may exercise your rights of access, rectification, or objection by writing to our contact email, and your right of erasure using the "Delete account" button described in section 5, or also by email if you prefer.</p>
 
         <h2>7. Changes to this policy</h2>
         <p>We may update this policy as the app adds new features. If changes are significant, we will update the date at the top of this document and, where appropriate, notify you within the app.</p>
 
         <div class="contact-info">
             <h2>8. Contact</h2>
-            <p>If you have questions about this privacy policy, or want to request deletion of your account or Community content, contact us at:</p>
+            <p>If you have questions about this privacy policy, contact us at:</p>
             <p><strong>Email:</strong> ruahsoftware@gmail.com</p>
             <p><strong>Website:</strong> https://ruahsoftware.github.io/site</p>
+            <p>To delete your account and Community data, use the button inside the app (see section 5) or visit our <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">account deletion page</a>.</p>
         </div>
 
         <div class="footer">
