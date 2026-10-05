@@ -1,328 +1,220 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DailyVerse — Eliminación de cuenta y datos / Account &amp; Data Deletion</title>
-<style>
-  :root {
-    --teal: #0f766e;
-    --teal-light: #14b8a6;
-    --text: #1f2937;
-    --muted: #6b7280;
-    --bg: #f8fafc;
-    --card: #ffffff;
-    --border: #e5e7eb;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  header {
-    background: linear-gradient(135deg, var(--teal), var(--teal-light));
-    color: white;
-    padding: 40px 20px;
-    text-align: center;
-  }
-  header h1 {
-    margin: 0 0 6px 0;
-    font-size: 1.6rem;
-  }
-  header p {
-    margin: 0;
-    opacity: 0.92;
-    font-size: 0.95rem;
-  }
-  .lang-toggle {
-    max-width: 760px;
-    margin: 20px auto 0 auto;
-    padding: 0 20px;
-    display: flex;
-    gap: 8px;
-    justify-content: center;
-  }
-  .lang-toggle button {
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    padding: 8px 16px;
-    border-radius: 999px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    cursor: pointer;
-  }
-  .lang-toggle button.active {
-    background: var(--teal);
-    color: white;
-    border-color: var(--teal);
-  }
-  main {
-    max-width: 760px;
-    margin: 24px auto 60px auto;
-    padding: 0 20px;
-  }
-  .card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 16px;
-    padding: 24px 28px;
-    margin-bottom: 20px;
-  }
-  h2 {
-    font-size: 1.15rem;
-    margin-top: 0;
-    color: var(--teal);
-  }
-  ol, ul {
-    padding-left: 22px;
-  }
-  li {
-    margin-bottom: 8px;
-  }
-  .note {
-    background: #fff7ed;
-    border: 1px solid #fed7aa;
-    border-radius: 12px;
-    padding: 14px 18px;
-    font-size: 0.92rem;
-    color: #7c2d12;
-  }
-  .keep {
-    background: #f0fdf4;
-    border: 1px solid #bbf7d0;
-    border-radius: 12px;
-    padding: 14px 18px;
-    font-size: 0.92rem;
-    color: #14532d;
-  }
-  footer {
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.85rem;
-    padding: 20px;
-  }
-  [data-lang] { display: none; }
-  [data-lang].active { display: block; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar cuenta - Delete account - DailyVerse</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: #f8f9fa;
+        }
+        .container {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        h3 {
+            color: #34495e;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+        .highlight {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .warning {
+            background: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .contact-info {
+            background: #f1f8e9;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        ul, ol {
+            padding-left: 22px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .lang-switch {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .lang-switch button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            margin-left: 6px;
+        }
+        .lang-switch button.inactive {
+            background: #cfd8dc;
+            color: #444;
+        }
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            text-align: center;
+            color: #666;
+            font-size: 0.9em;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+        <div class="lang-switch">
+            <button id="btn-es" onclick="setLang('es')">Español</button>
+            <button id="btn-en" onclick="setLang('en')">English</button>
+        </div>
 
-<header>
-  <h1>DailyVerse</h1>
-  <p>Eliminación de cuenta y datos&nbsp;·&nbsp;Account &amp; Data Deletion</p>
-</header>
+        <!-- ===================== ESPAÑOL ===================== -->
+        <div data-lang="es">
+            <h1>Eliminar tu cuenta y datos de Comunidad</h1>
 
-<div class="lang-toggle">
-  <button id="btn-es" class="active" onclick="setLang('es')">Español</button>
-  <button id="btn-en" onclick="setLang('en')">English</button>
-</div>
+            <div class="highlight">
+                <strong>Última actualización:</strong> 5 de octubre de 2026
+            </div>
 
-<main>
+            <p>DailyVerse incluye una sección llamada <strong>Comunidad</strong>, en la que puedes participar de dos formas distintas: como <strong>invitado</strong> (eligiendo solo un nombre, sin crear ninguna cuenta — la forma en que participa prácticamente todo el mundo) o como <strong>administrador</strong> (iniciando sesión con una cuenta de WordPress.com, reservado para el equipo de DailyVerse). Esta página explica cómo eliminar tu cuenta y tus datos en cualquiera de los dos casos.</p>
 
-  <!-- ================= ESPAÑOL ================= -->
-  <div data-lang="es" class="active">
+            <h2>Cómo eliminar tu cuenta — desde la app</h2>
+            <p>El método más rápido es hacerlo tú mismo, dentro de la app:</p>
+            <ol>
+                <li>Abre DailyVerse y ve a la pestaña <strong>Comunidad</strong>.</li>
+                <li>Si es la primera vez que usas Comunidad en este dispositivo, la app te pedirá elegir un nombre para mostrar y aceptar las Normas de la comunidad — esto no es una cuenta, es solo cómo te identificas ante los demás. Si ya participaste antes, puedes saltar este paso.</li>
+                <li>Toca el menú <strong>"⋮"</strong> (tres puntos) en la parte superior de la pantalla.</li>
+                <li>Selecciona <strong>"Eliminar cuenta"</strong> y confirma.</li>
+            </ol>
+            <p>Esto funciona igual tanto si participas como invitado como si iniciaste sesión como administrador — la app detecta automáticamente cuál es tu caso y elimina lo correspondiente (ver el detalle abajo).</p>
 
-    <div class="card">
-      <h2>Sobre esta página</h2>
-      <p>
-        Esta página explica cómo cualquier usuario de <strong>DailyVerse</strong>
-        (desarrollada por <strong>ruah software</strong>) puede solicitar la
-        eliminación de su cuenta y de los datos asociados a ella dentro de la
-        app, en cumplimiento con las políticas de Google Play.
-      </p>
+            <h3>¿Solo quieres cambiar tu nombre, sin eliminar nada?</h3>
+            <p>Si lo que buscas es dejar de usar un nombre determinado pero quieres mantener tus publicaciones y comentarios existentes, no necesitas eliminar tu cuenta: en ese mismo menú <strong>"⋮"</strong> encontrarás la opción <strong>"Cambiar de nombre"</strong>. No elimina nada, solo actualiza el nombre con el que firmas tu actividad a partir de ese momento.</p>
+
+            <h2>Qué se elimina</h2>
+            <p><strong>Si participas como invitado (sin cuenta):</strong></p>
+            <ul>
+                <li>Todas tus publicaciones activas en Comunidad (oraciones, gratitud, bendiciones, desafíos).</li>
+                <li>Todos tus comentarios en publicaciones de cualquier persona.</li>
+                <li>Tu nombre de invitado y el identificador de tu dispositivo, guardados localmente — la app genera uno nuevo de inmediato, así que puedes volver a participar cuando quieras, con un nombre nuevo.</li>
+            </ul>
+            <p><strong>Si eres administrador (cuenta de WordPress.com):</strong></p>
+            <ul>
+                <li>Todas tus publicaciones activas en Comunidad (oraciones, gratitud, bendiciones, desafíos).</li>
+                <li>Todos tus comentarios en publicaciones de cualquier persona.</li>
+                <li>Tu sesión activa dentro de la app (se cierra automáticamente).</li>
+            </ul>
+
+            <h2>Qué NO se elimina</h2>
+            <p><strong>Si participas como invitado:</strong> no hay ninguna cuenta de WordPress.com ni de ningún otro tipo que eliminar — nunca creaste una. Al terminar, simplemente puedes volver a participar en Comunidad cuando quieras, eligiendo un nombre nuevo, ya que no se requiere ninguna cuenta.</p>
+            <p><strong>Si eres administrador:</strong> tu cuenta de WordPress.com en sí <strong>no</strong> se elimina — DailyVerse solo la usa como método de inicio de sesión para administradores, no la administra. Si también quieres eliminar esa cuenta, debes hacerlo directamente desde wordpress.com.</p>
+
+            <h2>¿No tienes acceso a la app?</h2>
+            <p>Si no puedes usar el botón dentro de la app (por ejemplo, desinstalaste DailyVerse y quieres asegurarte de que tu contenido anterior se elimine), escríbenos a <strong>ruahsoftware@gmail.com</strong> indicando el nombre que usabas en Comunidad y, si lo recuerdas, aproximadamente cuándo publicaste, para que podamos ubicar y eliminar tu contenido.</p>
+
+            <div class="warning">
+                <p><strong>Nota:</strong> eliminar tu cuenta es una acción irreversible una vez confirmada dentro de la app. Cambiarte el nombre (en vez de eliminar la cuenta) tampoco te permite evadir un bloqueo aplicado por un administrador ni el silenciado aplicado por otro usuario — ambos quedan atados a tu identidad real de dispositivo o cuenta, no a tu nombre visible.</p>
+            </div>
+
+            <p>Para más detalles sobre qué datos procesamos y por qué, consulta nuestra <a href="https://ruahsoftware.github.io/dailyverse/privacy-policy-es.html">Política de Privacidad</a>.</p>
+        </div>
+
+        <!-- ===================== ENGLISH ===================== -->
+        <div data-lang="en" style="display:none">
+            <h1>Delete your account and Community data</h1>
+
+            <div class="highlight">
+                <strong>Last updated:</strong> October 5, 2026
+            </div>
+
+            <p>DailyVerse includes a section called <strong>Community</strong>, which you can take part in in two different ways: as a <strong>guest</strong> (simply choosing a display name, no account created — how virtually everyone participates) or as an <strong>administrator</strong> (signing in with a WordPress.com account, reserved for the DailyVerse team). This page explains how to delete your account and data in either case.</p>
+
+            <h2>How to delete your account — from the app</h2>
+            <p>The fastest method is to do it yourself, right inside the app:</p>
+            <ol>
+                <li>Open DailyVerse and go to the <strong>Community</strong> tab.</li>
+                <li>If this is the first time you're using Community on this device, the app will ask you to choose a display name and accept the Community Guidelines — this is not an account, it's just how others identify you. If you've already participated before, you can skip this step.</li>
+                <li>Tap the <strong>"⋮"</strong> menu (three dots) at the top of the screen.</li>
+                <li>Select <strong>"Delete account"</strong> and confirm.</li>
+            </ol>
+            <p>This works the same whether you participate as a guest or signed in as an administrator — the app automatically detects which case applies to you and deletes the corresponding data (see the detail below).</p>
+
+            <h3>Just want to change your name, without deleting anything?</h3>
+            <p>If you just want to stop using a particular name but keep your existing posts and comments, you don't need to delete your account: that same <strong>"⋮"</strong> menu has a <strong>"Change name"</strong> option. It deletes nothing — it only updates the name you sign your activity with going forward.</p>
+
+            <h2>What gets deleted</h2>
+            <p><strong>If you participate as a guest (no account):</strong></p>
+            <ul>
+                <li>All your active Community posts (prayers, gratitude, blessings, challenges).</li>
+                <li>All your comments on anyone's posts.</li>
+                <li>Your guest name and your device identifier, stored locally — the app generates a brand-new one right away, so you can participate again whenever you want, with a new name.</li>
+            </ul>
+            <p><strong>If you are an administrator (WordPress.com account):</strong></p>
+            <ul>
+                <li>All your active Community posts (prayers, gratitude, blessings, challenges).</li>
+                <li>All your comments on anyone's posts.</li>
+                <li>Your active session within the app (signed out automatically).</li>
+            </ul>
+
+            <h2>What does NOT get deleted</h2>
+            <p><strong>If you participate as a guest:</strong> there is no WordPress.com account, or any other kind of account, to delete — you never created one. Afterward, you can simply take part in Community again whenever you want, by choosing a new name, since no account is required.</p>
+            <p><strong>If you are an administrator:</strong> your WordPress.com account itself is <strong>not</strong> deleted — DailyVerse only uses it as a sign-in method for administrators, it does not manage it. If you also want to delete that account, you need to do so directly from wordpress.com.</p>
+
+            <h2>Don't have access to the app?</h2>
+            <p>If you can't use the in-app button (for example, you uninstalled DailyVerse and want to make sure your previous content is deleted), email us at <strong>ruahsoftware@gmail.com</strong> with the name you used in Community and, if you remember, roughly when you posted, so we can locate and delete your content.</p>
+
+            <div class="warning">
+                <p><strong>Note:</strong> deleting your account is irreversible once confirmed in the app. Changing your name (instead of deleting your account) also does not let you evade a block applied by an administrator or a mute applied by another user — both are tied to your real device or account identity, not your display name.</p>
+            </div>
+
+            <p>For more details on what data we process and why, see our <a href="https://ruahsoftware.github.io/dailyverse/privacy-policy-en.html">Privacy Policy</a>.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2026 RuahSoft</p>
+        </div>
     </div>
 
-    <div class="card">
-      <h2>Cómo eliminar tu cuenta</h2>
-      <ol>
-        <li>Abre la app <strong>DailyVerse</strong> en tu teléfono.</li>
-        <li>Ve a la pestaña <strong>Comunidad</strong>.</li>
-        <li>Inicia sesión con tu cuenta de WordPress.com, si aún no lo has hecho.</li>
-        <li>En la parte superior de la pantalla, toca el ícono de "⋮" (más opciones)
-          y selecciona <em>Eliminar cuenta</em>, al final del menú.</li>
-        <li>Confirma la acción en el cuadro de diálogo que aparece.</li>
-      </ol>
-      <p>
-        La eliminación ocurre de inmediato. Al finalizar, tu sesión se cierra
-        automáticamente.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Eliminar solo una publicación o comentario (sin borrar toda la cuenta)</h2>
-      <p>
-        Si solo quieres borrar una publicación o comentario puntual —sin
-        eliminar tu cuenta ni cerrar tu sesión— no hace falta usar el paso
-        anterior. Puedes hacerlo directamente sobre esa publicación o
-        comentario:
-      </p>
-      <ol>
-        <li>Ve a la pestaña <strong>Comunidad</strong> y busca tu publicación o comentario.</li>
-        <li>Toca el ícono de opciones (⋮) que aparece sobre esa publicación o comentario.</li>
-        <li>Selecciona <em>Eliminar</em> y confirma.</li>
-      </ol>
-      <p>
-        Esa publicación o comentario se borra al instante, y el resto de tu
-        cuenta y actividad en Comunidad sigue intacta.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Qué se elimina</h2>
-      <ul>
-        <li>Todas tus publicaciones activas en Comunidad (oraciones, gratitud, bendiciones, desafíos compartidos).</li>
-        <li>Todos tus comentarios en publicaciones de cualquier otra persona.</li>
-        <li>Tu sesión activa dentro de la app (se cierra automáticamente).</li>
-      </ul>
-      <div class="keep">
-        <strong>Nota sobre el tiempo de vida del contenido:</strong> por diseño,
-        toda publicación en Comunidad se elimina automáticamente a las 24 horas
-        de haberse publicado, exista o no una solicitud de eliminación de
-        cuenta. Al eliminar tu cuenta, este proceso simplemente se adelanta de
-        inmediato para todo tu contenido aún activo.
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Qué NO se elimina</h2>
-      <p>
-        <strong>Tu cuenta de WordPress.com no se elimina.</strong> DailyVerse
-        utiliza WordPress.com únicamente como método de inicio de sesión
-        (OAuth) — no administra ni tiene control sobre esa cuenta. Si además
-        deseas eliminar tu cuenta de WordPress.com, debes hacerlo directamente
-        desde <a href="https://wordpress.com" target="_blank" rel="noopener">wordpress.com</a>.
-      </p>
-      <div class="note">
-        Datos guardados únicamente en tu propio dispositivo (por ejemplo, tu
-        lista personal de usuarios silenciados, o tus preferencias locales de
-        la app) no pasan por nuestros servidores y se eliminan si desinstalas
-        la app o borras sus datos desde los ajustes de tu teléfono.
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Contacto</h2>
-      <p>
-        Si tienes problemas para eliminar tu cuenta desde la app, o preguntas
-        sobre esta política, puedes escribirnos a:
-        <br>
-        <strong>ruahsoftware@gmail.com</strong>
-      </p>
-    </div>
-
-  </div>
-
-  <!-- ================= ENGLISH ================= -->
-  <div data-lang="en">
-
-    <div class="card">
-      <h2>About this page</h2>
-      <p>
-        This page explains how any <strong>DailyVerse</strong> user
-        (developed by <strong>ruah software</strong>) can request the
-        deletion of their account and the data associated with it inside the
-        app, in compliance with Google Play policies.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>How to delete your account</h2>
-      <ol>
-        <li>Open the <strong>DailyVerse</strong> app on your phone.</li>
-        <li>Go to the <strong>Community</strong> tab.</li>
-        <li>Log in with your WordPress.com account, if you haven't already.</li>
-        <li>At the top of the screen, tap the "⋮" (more options) icon
-          and select <em>Delete account</em>, at the bottom of the menu.</li>
-        <li>Confirm the action in the dialog that appears.</li>
-      </ol>
-      <p>
-        Deletion happens immediately. Once complete, you are automatically
-        signed out.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Delete just one post or comment (without deleting your whole account)</h2>
-      <p>
-        If you only want to delete a single post or comment — without
-        deleting your account or signing out — you don't need the step
-        above. You can do it directly on that post or comment:
-      </p>
-      <ol>
-        <li>Go to the <strong>Community</strong> tab and find your post or comment.</li>
-        <li>Tap the options icon (⋮) shown on that post or comment.</li>
-        <li>Select <em>Delete</em> and confirm.</li>
-      </ol>
-      <p>
-        That post or comment is removed instantly, and the rest of your
-        account and Community activity stays intact.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>What gets deleted</h2>
-      <ul>
-        <li>All your active Community posts (prayers, gratitude, blessings, shared challenges).</li>
-        <li>All your comments on anyone else's posts.</li>
-        <li>Your active session within the app (signed out automatically).</li>
-      </ul>
-      <div class="keep">
-        <strong>Note on content lifetime:</strong> by design, every Community
-        post is automatically deleted 24 hours after being published, whether
-        or not an account deletion request is made. Deleting your account
-        simply moves this process up immediately for all of your still-active
-        content.
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>What does NOT get deleted</h2>
-      <p>
-        <strong>Your WordPress.com account is not deleted.</strong> DailyVerse
-        only uses WordPress.com as a sign-in method (OAuth) — it does not
-        manage or control that account. If you also want to delete your
-        WordPress.com account, you must do so directly from
-        <a href="https://wordpress.com" target="_blank" rel="noopener">wordpress.com</a>.
-      </p>
-      <div class="note">
-        Data stored only on your own device (for example, your personal list
-        of muted users, or your local app preferences) never passes through
-        our servers and is removed if you uninstall the app or clear its data
-        from your phone's settings.
-      </div>
-    </div>
-
-    <div class="card">
-      <h2>Contact</h2>
-      <p>
-        If you have trouble deleting your account from the app, or questions
-        about this policy, you can reach us at:
-        <br>
-        <strong>ruahsoftware@gmail.com</strong>
-      </p>
-    </div>
-
-  </div>
-
-</main>
-
-<footer>
-  DailyVerse — ruah software
-</footer>
-
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(function (el) {
-      el.classList.toggle('active', el.getAttribute('data-lang') === lang);
-    });
-    document.getElementById('btn-es').classList.toggle('active', lang === 'es');
-    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  }
-</script>
-
+    <script>
+        function setLang(lang) {
+            document.querySelectorAll('[data-lang]').forEach(function (el) {
+                el.style.display = (el.getAttribute('data-lang') === lang) ? '' : 'none';
+            });
+            document.getElementById('btn-es').className = (lang === 'es') ? '' : 'inactive';
+            document.getElementById('btn-en').className = (lang === 'en') ? '' : 'inactive';
+        }
+        setLang('es');
+    </script>
 </body>
 </html>
