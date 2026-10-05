@@ -94,12 +94,12 @@
         <h1>Privacy Policy</h1>
 
         <div class="highlight">
-            <strong>Last updated:</strong> September 22, 2026
+            <strong>Last updated:</strong> October 5, 2026
         </div>
 
         <p>At <strong>RuahSoft</strong>, developers of <strong>DailyVerse</strong>, we respect and protect your privacy. Most of the app (daily verse, personal notes, saved verses, challenges, personal finance tracking, and preferences) works <strong>completely offline</strong>, and that data never leaves your device.</p>
 
-        <p>However, DailyVerse includes a section called <strong>"Community"</strong>, a public prayer wall where users can post prayer requests, comments, and testimonies visible to other people in the community. To post or comment in Community, you must sign in with a WordPress.com account, and that content — along with the data needed to moderate it — <strong>is processed on external servers</strong>. This policy explains clearly what happens in each case.</p>
+        <p>However, DailyVerse includes a section called <strong>"Community"</strong>, a public prayer wall where users can post prayer requests, comments, and testimonies visible to other people in the community. <strong>Taking part in Community does not require creating any account</strong> — you simply choose a display name the first time you post or comment. (The only exception is DailyVerse's own administrators, who sign in with a WordPress.com account to access moderation tools — see section 2.1 below.) That content — along with the data needed to moderate it — <strong>is processed on external servers</strong>. This policy explains clearly what happens in each case.</p>
 
         <div class="highlight">
             <h2>📋 Quick summary</h2>
@@ -113,8 +113,12 @@
                     <td>Only on your device. Never sent to any server.</td>
                 </tr>
                 <tr>
-                    <td>Community (posting, commenting, praying for someone)</td>
-                    <td>Requires a WordPress.com account. Content is published to a WordPress.com blog, and some moderation data is stored on our backend (Cloudflare Workers).</td>
+                    <td>Community (posting, commenting, praying for someone) — no account needed</td>
+                    <td>You choose a display name and a random device identifier is generated locally. That name, identifier, and your content are sent to our backend (Cloudflare Workers) and published to a WordPress.com blog.</td>
+                </tr>
+                <tr>
+                    <td>Community administration (moderating, pinning, blocking users)</td>
+                    <td>Requires a WordPress.com account, used only by DailyVerse's own administrators.</td>
                 </tr>
             </table>
         </div>
@@ -123,17 +127,18 @@
         <p>Outside of the Community section, DailyVerse does not collect, store in the cloud, process, or share any personal data. We don't use advertising, we don't use third-party analytics or crash-reporting tools, we don't send push notifications, and the app has no purchases or subscriptions. Any content you create outside of Community (notes, saved verses, preferences, challenge progress, personal finance records, etc.) is kept only in your device's internal storage, and is automatically deleted when you uninstall the app.</p>
 
         <h2>2. Data we do process — only within Community</h2>
-        <p>The data below is only generated if you choose to sign in and take part in Community. If you never use this section, nothing in this part applies to you.</p>
+        <p>The data below is only generated if you choose to take part in Community. If you never use this section, nothing in this part applies to you.</p>
 
-        <h3>2.1 Account and identity</h3>
+        <h3>2.1 Identity: guest participants and administrators</h3>
+        <p>DailyVerse uses two different kinds of identity in Community, depending on who you are:</p>
         <ul>
-            <li><strong>WordPress.com account:</strong> to post or comment, you sign in with a WordPress.com account (your own, free of charge). We never see or store your password — authentication is handled directly by WordPress.com.</li>
-            <li><strong>User ID and username:</strong> once you sign in, we store the WordPress.com user ID and username linked to your account, so we can correctly attribute your posts, enforce daily usage limits, and moderate your activity if needed.</li>
+            <li><strong>Everyone (guest identity, no account):</strong> the first time you post or comment, the app asks you to choose a display name (free text, no password, no email, no sign-up). At the same time, your device generates a random identifier (a UUID) that stays only on your device and is sent to our backend along with your posts and comments, so we can recognize which content is yours — for example, to let you edit or delete your own posts, and to enforce daily posting limits. This identifier is not linked to your name, email, phone number, advertising ID, or any other account; it exists solely to operate Community.</li>
+            <li><strong>Administrators only:</strong> DailyVerse's own administrators sign in with a WordPress.com account (their own, free of charge) to access moderation tools (pinning, blocking users, managing reports). We never see or store their password — authentication is handled directly by WordPress.com. Regular users never need to create or use a WordPress.com account to participate in Community.</li>
         </ul>
 
         <h3>2.2 Content you post</h3>
         <ul>
-            <li>Prayer requests, comments, and testimonies you post in Community are stored on a WordPress.com blog (owned by Automattic Inc.) and are <strong>publicly visible</strong> to other people in the app's community.</li>
+            <li>Prayer requests, comments, and testimonies you post in Community are stored on a WordPress.com blog (owned by Automattic Inc., used as our publishing infrastructure) and are <strong>publicly visible</strong> to other people in the app's community — this applies whether you post as a guest or as an administrator.</li>
             <li>Please do not post sensitive information you don't want made public (other people's full names, addresses, phone numbers, etc.) — our Community Guidelines explicitly ask you to avoid this.</li>
         </ul>
 
@@ -141,42 +146,43 @@
         <p>To keep Community a safe space, our backend (hosted on Cloudflare Workers, with storage in Cloudflare KV) temporarily stores:</p>
         <ul>
             <li>Content reports: who reported what, and why — used only so an administrator can review the case.</li>
-            <li>A list of accounts blocked for violating the community guidelines.</li>
-            <li>A daily count of posts/comments per user, to prevent spam.</li>
-            <li>An internal mapping that links each post to the real ID of whoever wrote it (since posts are technically published through a shared administrator account), used solely so moderation can be applied precisely.</li>
+            <li>A list of accounts/devices blocked for violating the community guidelines — for a guest, this block is tied to their device identifier, not their chosen name, so changing names does not lift a block.</li>
+            <li>A daily count of posts/comments per guest device or administrator account, to prevent spam.</li>
+            <li>An internal mapping that links each post to the real identity of whoever wrote it (device identifier for a guest, or user ID for an administrator) — since all Community content is technically published through a single shared administrator account on WordPress.com, this mapping is what lets us attribute posts to their real author and apply moderation precisely.</li>
         </ul>
-        <p>This moderation data is kept only as long as needed (some entries automatically expire after 30 days; account blocks remain in place until an administrator reverses them) and is not used for advertising purposes, sold, or shared with any third party other than those named in this policy.</p>
+        <p>This moderation data is kept only as long as needed (some entries automatically expire after 30 days; blocks remain in place until an administrator reverses them) and is not used for advertising purposes, sold, or shared with any third party other than those named in this policy.</p>
 
         <h3>2.4 Local "muting"</h3>
-        <p>In addition to the blocking an administrator can apply, any user can "mute" another author within Community. This feature is <strong>purely local</strong>: your list of muted people is stored only on your own device, is never sent to our servers, and the muted person is never notified.</p>
+        <p>In addition to the blocking an administrator can apply, any user can "mute" another author within Community. This feature is <strong>purely local</strong>: your list of muted people is stored only on your own device, tied to the other person's real identity (not just their display name, so it keeps working even if they change their name), is never sent to our servers, and the muted person is never notified.</p>
 
         <h2>3. Third-party services involved</h2>
         <ul>
-            <li><strong>WordPress.com / Automattic Inc.:</strong> handles sign-in and hosts Community's public content. We recommend reviewing <a href="https://automattic.com/privacy/" target="_blank" rel="noopener">Automattic's privacy policy</a>.</li>
-            <li><strong>Cloudflare, Inc.:</strong> hosts our backend (Cloudflare Workers and KV), which processes and stores the moderation data described in section 2.3, acting as our infrastructure provider.</li>
+            <li><strong>WordPress.com / Automattic Inc.:</strong> hosts Community's public content, and handles sign-in for our administrators. We recommend reviewing <a href="https://automattic.com/privacy/" target="_blank" rel="noopener">Automattic's privacy policy</a>.</li>
+            <li><strong>Cloudflare, Inc.:</strong> hosts our backend (Cloudflare Workers and KV), which processes and stores the moderation and guest-identity data described in sections 2.1 and 2.3, acting as our infrastructure provider.</li>
         </ul>
         <p>We do not share your data with any other third party, use it for advertising, or sell it.</p>
 
         <h2>4. Data security</h2>
-        <p>We apply reasonable measures to protect the information processed within Community, including encrypted communication (HTTPS) with our backend and with WordPress.com. No system is 100% foolproof, but we never store passwords or any kind of financial or payment data.</p>
+        <p>We apply reasonable measures to protect the information processed within Community, including encrypted communication (HTTPS) with our backend and with WordPress.com. No system is 100% foolproof, but we never store passwords (regular guest participation has none to begin with) or any kind of financial or payment data.</p>
 
         <h2>5. Your rights</h2>
         <ul>
             <li>You can delete any of your own posts or comments directly from the app, at any time.</li>
             <li>You can stop using Community at any time without affecting the rest of the app, which keeps working 100% offline.</li>
-            <li><strong>You can delete your account and all Community-related data yourself, instantly, right from the app</strong>: sign in, go to the Community tab, tap the "⋮" menu at the top, and select "Delete account". This immediately removes all your posts and comments, and signs you out. See the full detail of what gets deleted (and what doesn't) on our <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">account deletion page</a>.</li>
+            <li><strong>You can delete your account and all Community-related data yourself, instantly, right from the app</strong>: go to the Community tab, tap the "⋮" menu at the top, and select "Delete account". This immediately removes all your posts and comments; for a guest, it also deletes your locally stored display name and device identifier, so the next time you take part you start with a brand-new identity. See the full detail of what gets deleted (and what doesn't) on our <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">account deletion page</a>.</li>
+            <li>If you just want to use a different display name going forward, without deleting your existing posts and comments, you can do that from the same "⋮" menu with "Change name" — nothing is deleted.</li>
             <li>If for any reason you can't use that button, you can also request deletion by writing to the email address listed at the end of this policy.</li>
             <li>When you uninstall the app, all content stored locally on your device is automatically deleted (this does not include content you've already made public in Community, which remains until you delete it yourself with the button described above, or until it expires on its own 24 hours after being posted).</li>
         </ul>
 
         <div class="warning">
             <h2>🛡️ Children and Community</h2>
-            <p>The features that don't require an account (daily verse, notes, saved verses, personal challenges, personal finance tracking) are safe for the whole family, including children under 13, since they collect no data and run entirely on the device.</p>
-            <p><strong>The Community section is not directed at children under 13.</strong> Signing in to Community requires a WordPress.com account, and WordPress.com/Automattic requires users to be at least 13 years old to create one. As a result, we do not knowingly collect data from children under 13 through Community. If a parent or guardian believes a child under 13 has created an account and posted in Community, they can use the "Delete account" button described in section 5 from the child's device, or contact us to request that the account and its content be removed.</p>
+            <p>The features that don't require any participation in Community (daily verse, notes, saved verses, personal challenges, personal finance tracking) are safe for the whole family, including children under 13, since they collect no data and run entirely on the device.</p>
+            <p><strong>Community requires users to be at least 13 years old.</strong> Because taking part in Community does not require creating an account, we rely on self-declaration: before posting or commenting for the first time, users must confirm they are 13 or older as part of accepting our Community Guidelines. We do not independently verify age, which is standard for apps offering free-text guest participation (similar to typical blog comment sections). As a result, we do not knowingly collect data from children under 13 through Community. If a parent or guardian believes a child under 13 has taken part in Community, they can use the "Delete account" button described in section 5 from the child's device, or contact us to request that the content and locally stored guest identity be removed.</p>
         </div>
 
         <h2>6. Users in the European Union (GDPR)</h2>
-        <p>If you are located in the European Union and use Community, the data described in Section 2 is processed based on your consent (given when you sign in and post) and on our legitimate interest in keeping the community safe and free of spam or abuse. You may exercise your rights of access, rectification, or objection by writing to our contact email, and your right of erasure using the "Delete account" button described in section 5, or also by email if you prefer.</p>
+        <p>If you are located in the European Union and use Community, the data described in Section 2 is processed based on your consent (given when you accept the Community Guidelines and post or comment) and on our legitimate interest in keeping the community safe and free of spam or abuse. You may exercise your rights of access, rectification, or objection by writing to our contact email, and your right of erasure using the "Delete account" button described in section 5, or also by email if you prefer.</p>
 
         <h2>7. Changes to this policy</h2>
         <p>We may update this policy as the app adds new features. If changes are significant, we will update the date at the top of this document and, where appropriate, notify you within the app.</p>
