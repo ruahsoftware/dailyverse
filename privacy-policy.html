@@ -94,12 +94,12 @@
         <h1>Política de Privacidad</h1>
 
         <div class="highlight">
-            <strong>Última actualización:</strong> 22/9/2026
+            <strong>Última actualización:</strong> 5 de octubre de 2026
         </div>
 
-        <p>En <strong>RuahSoft</strong>, desarrolladores de <strong>DailyVerse</strong>, respetamos y protegemos su privacidad. La mayor parte de la aplicación (versos diarios, notas personales, versículos guardados, desafíos, finanzas personales y preferencias) funciona <strong>completamente offline</strong> y esos datos nunca salen de su dispositivo.</p>
+        <p>En <strong>RuahSoft</strong>, desarrolladores de <strong>DailyVerse</strong>, respetamos y protegemos tu privacidad. La mayor parte de la app (versículo diario, notas personales, versículos guardados, desafíos, control de finanzas personales y preferencias) funciona <strong>completamente sin conexión</strong>, y esos datos nunca salen de tu dispositivo.</p>
 
-        <p>Sin embargo, DailyVerse incluye una sección llamada <strong>"Comunidad"</strong>, un muro de oración público donde las personas usuarias pueden publicar peticiones de oración, comentarios y testimonios visibles para otras personas de la comunidad. Para poder publicar o comentar en Comunidad es necesario iniciar sesión con una cuenta de WordPress.com, y ese contenido y los datos necesarios para moderarlo <strong>sí se procesan en servidores externos</strong>. Esta política explica con claridad qué pasa en cada caso.</p>
+        <p>Sin embargo, DailyVerse incluye una sección llamada <strong>"Comunidad"</strong>, un muro público de oración donde los usuarios pueden publicar peticiones de oración, comentarios y testimonios visibles para otras personas de la comunidad. <strong>Participar en Comunidad no requiere crear ninguna cuenta</strong> — simplemente eliges un nombre para mostrar la primera vez que publicas o comentas. (La única excepción son los propios administradores de DailyVerse, que inician sesión con una cuenta de WordPress.com para acceder a las herramientas de moderación — ver la sección 2.1 más abajo). Ese contenido — junto con los datos necesarios para moderarlo — <strong>se procesa en servidores externos</strong>. Esta política explica claramente qué ocurre en cada caso.</p>
 
         <div class="highlight">
             <h2>📋 Resumen rápido</h2>
@@ -109,84 +109,90 @@
                     <th>¿Dónde viven tus datos?</th>
                 </tr>
                 <tr>
-                    <td>Verso del día, notas, versículos guardados, desafíos, finanzas personales, preferencias</td>
+                    <td>Versículo diario, notas, versículos guardados, desafíos, control de finanzas personales, preferencias</td>
                     <td>Solo en tu dispositivo. Nunca se envían a ningún servidor.</td>
                 </tr>
                 <tr>
-                    <td>Comunidad (publicar, comentar, orar por alguien)</td>
-                    <td>Requiere cuenta de WordPress.com. El contenido se publica en un blog de WordPress.com y algunos datos de moderación se guardan en nuestro backend (Cloudflare Workers).</td>
+                    <td>Comunidad (publicar, comentar, orar por alguien) — sin necesidad de cuenta</td>
+                    <td>Eliges un nombre para mostrar y se genera localmente un identificador aleatorio de dispositivo. Ese nombre, el identificador y tu contenido se envían a nuestro backend (Cloudflare Workers) y se publican en un blog de WordPress.com.</td>
+                </tr>
+                <tr>
+                    <td>Administración de Comunidad (moderar, fijar publicaciones, bloquear usuarios)</td>
+                    <td>Requiere una cuenta de WordPress.com, usada solo por los propios administradores de DailyVerse.</td>
                 </tr>
             </table>
         </div>
 
-        <h2>1. Datos que NO recopilamos</h2>
-        <p>Fuera de la sección Comunidad, DailyVerse no recopila, almacena en la nube, procesa ni comparte ningún dato personal. No usamos publicidad, no usamos herramientas de analítica ni de reporte de errores de terceros, no enviamos notificaciones push y la app no tiene compras ni suscripciones. Todo el contenido que usted genere fuera de Comunidad (notas, versículos guardados, preferencias, progreso de desafíos, registros de finanzas personales, etc.) se mantiene únicamente en el almacenamiento interno de su dispositivo, y se elimina automáticamente al desinstalar la app.</p>
+        <h2>1. Datos que NO recolectamos</h2>
+        <p>Fuera de la sección Comunidad, DailyVerse no recolecta, almacena en la nube, procesa ni comparte ningún dato personal. No usamos publicidad, no usamos herramientas de análisis ni de reporte de errores de terceros, no enviamos notificaciones push, y la app no tiene compras ni suscripciones. Cualquier contenido que crees fuera de Comunidad (notas, versículos guardados, preferencias, progreso de desafíos, registros de finanzas personales, etc.) se guarda únicamente en el almacenamiento interno de tu dispositivo, y se elimina automáticamente cuando desinstalas la app.</p>
 
         <h2>2. Datos que sí procesamos — solo dentro de Comunidad</h2>
-        <p>Estos datos solo se generan si usted decide iniciar sesión y participar en Comunidad. Si nunca usa esta sección, no se aplica nada de este apartado.</p>
+        <p>Los datos a continuación solo se generan si decides participar en Comunidad. Si nunca usas esta sección, nada de esta parte te aplica.</p>
 
-        <h3>2.1 Cuenta e identidad</h3>
+        <h3>2.1 Identidad: participantes invitados y administradores</h3>
+        <p>DailyVerse usa dos tipos distintos de identidad en Comunidad, según quién seas:</p>
         <ul>
-            <li><strong>Cuenta de WordPress.com:</strong> para publicar o comentar, usted inicia sesión con una cuenta de WordPress.com (propia, gratuita). Nosotros no vemos ni almacenamos su contraseña — la autenticación la maneja WordPress.com directamente.</li>
-            <li><strong>Identificador de usuario y nombre de usuario:</strong> tras iniciar sesión, guardamos el ID y el nombre de usuario de WordPress.com asociados a su cuenta, para poder atribuirle correctamente sus publicaciones, aplicar límites diarios de uso y, si corresponde, moderar su actividad.</li>
+            <li><strong>Todos (identidad de invitado, sin cuenta):</strong> la primera vez que publicas o comentas, la app te pide elegir un nombre para mostrar (texto libre, sin contraseña, sin correo, sin registro). Al mismo tiempo, tu dispositivo genera un identificador aleatorio (un UUID) que permanece solo en tu dispositivo y se envía a nuestro backend junto con tus publicaciones y comentarios, para que podamos reconocer cuál contenido es tuyo — por ejemplo, para permitirte editar o eliminar tus propias publicaciones, y para aplicar límites diarios de publicación. Este identificador no está vinculado a tu nombre real, correo, número de teléfono, ID de publicidad ni ninguna otra cuenta; existe únicamente para que Comunidad funcione.</li>
+            <li><strong>Solo administradores:</strong> los propios administradores de DailyVerse inician sesión con una cuenta de WordPress.com (propia, gratuita) para acceder a herramientas de moderación (fijar publicaciones, bloquear usuarios, gestionar reportes). Nunca vemos ni almacenamos su contraseña — la autenticación la maneja directamente WordPress.com. Los usuarios comunes nunca necesitan crear ni usar una cuenta de WordPress.com para participar en Comunidad.</li>
         </ul>
 
-        <h3>2.2 Contenido publicado</h3>
+        <h3>2.2 Contenido que publicas</h3>
         <ul>
-            <li>Las peticiones de oración, comentarios y testimonios que usted publique en Comunidad se guardan en un blog de WordPress.com (propiedad de Automattic Inc.) y son <strong>visibles públicamente</strong> para otras personas dentro de la comunidad de la app.</li>
-            <li>No publique en Comunidad información sensible que no quiera hacer pública (nombres completos de terceros, direcciones, teléfonos, etc.) — nuestras Normas de la comunidad piden explícitamente evitar esto.</li>
+            <li>Las peticiones de oración, comentarios y testimonios que publicas en Comunidad se almacenan en un blog de WordPress.com (propiedad de Automattic Inc., usado como nuestra infraestructura de publicación) y son <strong>visibles públicamente</strong> para otras personas de la comunidad de la app — esto aplica tanto si publicas como invitado como si lo haces como administrador.</li>
+            <li>Por favor no publiques información sensible que no quieras hacer pública (nombres completos, direcciones, números de teléfono de otras personas, etc.) — nuestras Normas de la comunidad te piden explícitamente evitar esto.</li>
         </ul>
 
         <h3>2.3 Moderación y seguridad</h3>
         <p>Para mantener Comunidad como un espacio seguro, nuestro backend (alojado en Cloudflare Workers, con almacenamiento en Cloudflare KV) guarda temporalmente:</p>
         <ul>
-            <li>Reportes de contenido: quién reportó, a quién, y por qué — usados solo para que un administrador revise el caso.</li>
-            <li>Lista de cuentas bloqueadas por infringir las normas de la comunidad.</li>
-            <li>Un conteo diario de publicaciones/comentarios por usuario, para evitar spam.</li>
-            <li>Un mapeo interno que vincula cada publicación con el ID real de quien la escribió (ya que técnicamente se publica a través de una cuenta administradora compartida), usado únicamente para poder aplicar moderación con precisión.</li>
+            <li>Reportes de contenido: quién reportó qué, y por qué — usado solo para que un administrador pueda revisar el caso.</li>
+            <li>Una lista de cuentas/dispositivos bloqueados por violar las normas de la comunidad — para un invitado, este bloqueo está atado a su identificador de dispositivo, no a su nombre elegido, así que cambiarse el nombre no levanta un bloqueo.</li>
+            <li>Un conteo diario de publicaciones/comentarios por dispositivo invitado o cuenta de administrador, para prevenir spam.</li>
+            <li>Un mapeo interno que vincula cada publicación con la identidad real de quien la escribió (identificador de dispositivo para un invitado, o ID de usuario para un administrador) — ya que todo el contenido de Comunidad se publica técnicamente a través de una única cuenta de administrador compartida en WordPress.com, este mapeo es lo que nos permite atribuir las publicaciones a su autor real y aplicar moderación con precisión.</li>
         </ul>
-        <p>Estos datos de moderación se conservan solo mientras son necesarios (algunos vencen automáticamente en un plazo de 30 días; los bloqueos de cuentas permanecen hasta que un administrador los revierte) y no se usan con fines de publicidad ni se venden ni se comparten con terceros distintos de los mencionados en esta política.</p>
+        <p>Estos datos de moderación se conservan solo el tiempo necesario (algunos registros vencen automáticamente a los 30 días; los bloqueos permanecen vigentes hasta que un administrador los revierte) y no se usan con fines publicitarios, no se venden ni se comparten con ningún tercero distinto de los mencionados en esta política.</p>
 
-        <h3>2.4 "Silenciar" localmente</h3>
-        <p>Además del bloqueo que puede aplicar un administrador, cualquier usuario puede "silenciar" a otro autor dentro de Comunidad. Esta función es <strong>puramente local</strong>: la lista de personas silenciadas se guarda solo en su propio dispositivo, nunca se envía a nuestros servidores, y la persona silenciada no es notificada.</p>
+        <h3>2.4 "Silenciado" local</h3>
+        <p>Además del bloqueo que puede aplicar un administrador, cualquier usuario puede "silenciar" a otro autor dentro de Comunidad. Esta función es <strong>puramente local</strong>: tu lista de personas silenciadas se guarda solo en tu propio dispositivo, atada a la identidad real de la otra persona (no solo a su nombre visible, así que sigue funcionando aunque esa persona se cambie el nombre), nunca se envía a nuestros servidores, y la persona silenciada nunca es notificada.</p>
 
         <h2>3. Servicios de terceros involucrados</h2>
         <ul>
-            <li><strong>WordPress.com / Automattic Inc.:</strong> gestiona el inicio de sesión y aloja el contenido público de Comunidad. Le recomendamos revisar la <a href="https://automattic.com/privacy/" target="_blank" rel="noopener">política de privacidad de Automattic</a>.</li>
-            <li><strong>Cloudflare, Inc.:</strong> aloja nuestro backend (Cloudflare Workers y KV), que procesa y almacena los datos de moderación descritos en la sección 2.3, actuando como nuestro proveedor de infraestructura.</li>
+            <li><strong>WordPress.com / Automattic Inc.:</strong> aloja el contenido público de Comunidad, y maneja el inicio de sesión de nuestros administradores. Te recomendamos revisar la <a href="https://automattic.com/privacy/" target="_blank" rel="noopener">política de privacidad de Automattic</a>.</li>
+            <li><strong>Cloudflare, Inc.:</strong> aloja nuestro backend (Cloudflare Workers y KV), que procesa y almacena los datos de moderación e identidad de invitados descritos en las secciones 2.1 y 2.3, actuando como nuestro proveedor de infraestructura.</li>
         </ul>
-        <p>No compartimos sus datos con ningún otro tercero, ni los usamos para publicidad, ni los vendemos.</p>
+        <p>No compartimos tus datos con ningún otro tercero, no los usamos con fines publicitarios ni los vendemos.</p>
 
         <h2>4. Seguridad de los datos</h2>
-        <p>Aplicamos medidas razonables para proteger la información que procesamos en Comunidad, incluyendo comunicación cifrada (HTTPS) con nuestro backend y con WordPress.com. Ningún sistema es 100% infalible, pero no almacenamos contraseñas ni datos financieros o de pago de ningún tipo.</p>
+        <p>Aplicamos medidas razonables para proteger la información procesada dentro de Comunidad, incluyendo comunicación cifrada (HTTPS) con nuestro backend y con WordPress.com. Ningún sistema es 100% infalible, pero nunca almacenamos contraseñas (la participación normal como invitado no tiene ninguna para empezar) ni ningún tipo de dato financiero o de pago.</p>
 
-        <h2>5. Sus derechos</h2>
+        <h2>5. Tus derechos</h2>
         <ul>
-            <li>Puede eliminar cualquier publicación o comentario propio directamente desde la app, en cualquier momento.</li>
-            <li>Puede dejar de usar Comunidad en cualquier momento sin afectar el resto de la app, que sigue funcionando 100% offline.</li>
-            <li><strong>Puede eliminar su cuenta y todos los datos asociados a Comunidad usted mismo, al instante, desde dentro de la app</strong>: inicie sesión, vaya a la pestaña Comunidad, toque el menú "⋮" en la parte superior y seleccione "Eliminar cuenta". Esto borra de inmediato todas sus publicaciones y comentarios, y cierra su sesión. Vea el detalle completo de qué se borra y qué no en nuestra <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">página de eliminación de cuenta</a>.</li>
-            <li>Si por algún motivo no puede usar ese botón, también puede solicitarnos la eliminación escribiéndonos al correo indicado al final de esta política.</li>
-            <li>Al desinstalar la app, todo el contenido guardado localmente en su dispositivo se elimina automáticamente (esto no incluye lo ya publicado públicamente en Comunidad, que sigue existiendo hasta que lo borre usted mismo con el botón mencionado arriba, o hasta que expire por sí solo a las 24 horas de publicado).</li>
+            <li>Puedes eliminar cualquiera de tus propias publicaciones o comentarios directamente desde la app, en cualquier momento.</li>
+            <li>Puedes dejar de usar Comunidad en cualquier momento sin afectar el resto de la app, que sigue funcionando 100% sin conexión.</li>
+            <li><strong>Puedes eliminar tu cuenta y todos los datos relacionados con Comunidad tú mismo, al instante, directamente desde la app</strong>: ve a la pestaña Comunidad, toca el menú "⋮" en la parte superior, y selecciona "Eliminar cuenta". Esto elimina de inmediato todas tus publicaciones y comentarios; si eres invitado, también elimina tu nombre guardado y tu identificador de dispositivo almacenados localmente, así que la próxima vez que participes empiezas con una identidad completamente nueva. Consulta el detalle completo de qué se elimina (y qué no) en nuestra <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">página de eliminación de cuenta</a>.</li>
+            <li>Si solo quieres usar otro nombre para mostrar de ahora en adelante, sin eliminar tus publicaciones y comentarios existentes, puedes hacerlo desde ese mismo menú "⋮" con "Cambiar de nombre" — no se elimina nada.</li>
+            <li>Si por alguna razón no puedes usar ese botón, también puedes solicitar la eliminación escribiendo al correo indicado al final de esta política.</li>
+            <li>Al desinstalar la app, todo el contenido almacenado localmente en tu dispositivo se elimina automáticamente (esto no incluye el contenido que ya hayas hecho público en Comunidad, que permanece hasta que lo elimines tú mismo con el botón descrito arriba, o hasta que venza por sí solo 24 horas después de publicado).</li>
         </ul>
 
         <div class="warning">
-            <h2>🛡️ Menores de edad y Comunidad</h2>
-            <p>Las funciones que no requieren cuenta (verso del día, notas, versículos guardados, desafíos personales, finanzas personales) son seguras para toda la familia, incluyendo niños menores de 13 años, ya que no recopilan ningún dato y funcionan enteramente en el dispositivo.</p>
-            <p><strong>La sección Comunidad no está dirigida a menores de 13 años.</strong> Iniciar sesión en Comunidad requiere una cuenta de WordPress.com, y WordPress.com/Automattic exige que sus usuarios tengan al menos 13 años para crear una cuenta. En consecuencia, no recopilamos intencionalmente datos de menores de 13 años a través de Comunidad. Si un padre o tutor cree que un menor de 13 años ha creado una cuenta y publicado en Comunidad, puede usar el botón "Eliminar cuenta" descrito en la sección 5 desde el dispositivo del menor, o escribirnos para solicitar la eliminación de esa cuenta y su contenido.</p>
+            <h2>🛡️ Niños y Comunidad</h2>
+            <p>Las funciones que no requieren ninguna participación en Comunidad (versículo diario, notas, versículos guardados, desafíos personales, control de finanzas personales) son seguras para toda la familia, incluyendo niños menores de 13 años, ya que no recolectan ningún dato y funcionan por completo en el dispositivo.</p>
+            <p><strong>Comunidad requiere que los usuarios tengan al menos 13 años.</strong> Dado que participar en Comunidad no requiere crear ninguna cuenta, nos basamos en una autodeclaración: antes de publicar o comentar por primera vez, los usuarios deben confirmar que tienen 13 años o más como parte de aceptar nuestras Normas de la comunidad. No verificamos la edad de forma independiente, lo cual es habitual en apps que ofrecen participación de invitado con texto libre (similar a las secciones de comentarios típicas de un blog). Como resultado, no recolectamos a sabiendas datos de niños menores de 13 años a través de Comunidad. Si un padre, madre o tutor cree que un menor de 13 años ha participado en Comunidad, puede usar el botón "Eliminar cuenta" descrito en la sección 5 desde el dispositivo del menor, o contactarnos para solicitar que se elimine el contenido y la identidad de invitado guardada localmente.</p>
         </div>
 
         <h2>6. Usuarios en la Unión Europea (RGPD)</h2>
-        <p>Si usted se encuentra en la Unión Europea y utiliza Comunidad, los datos descritos en la sección 2 se procesan con base en su consentimiento (al iniciar sesión y publicar) y en nuestro interés legítimo de mantener la comunidad segura y libre de spam o abuso. Puede ejercer sus derechos de acceso, rectificación u oposición escribiéndonos al correo de contacto, y su derecho de supresión usando el botón "Eliminar cuenta" descrito en la sección 5, o también por correo si lo prefiere.</p>
+        <p>Si te encuentras en la Unión Europea y usas Comunidad, los datos descritos en la Sección 2 se procesan con base en tu consentimiento (otorgado al aceptar las Normas de la comunidad y publicar o comentar) y en nuestro interés legítimo de mantener la comunidad segura y libre de spam o abuso. Puedes ejercer tus derechos de acceso, rectificación u oposición escribiendo a nuestro correo de contacto, y tu derecho de supresión usando el botón "Eliminar cuenta" descrito en la sección 5, o también por correo si lo prefieres.</p>
 
-        <h2>7. Cambios en esta política</h2>
-        <p>Podemos actualizar esta política a medida que la app incorpore nuevas funciones. Si los cambios son significativos, actualizaremos la fecha al inicio de este documento y, cuando corresponda, se lo notificaremos dentro de la app.</p>
+        <h2>7. Cambios a esta política</h2>
+        <p>Podemos actualizar esta política a medida que la app agregue nuevas funciones. Si los cambios son significativos, actualizaremos la fecha en la parte superior de este documento y, cuando corresponda, te notificaremos dentro de la app.</p>
 
         <div class="contact-info">
             <h2>8. Contacto</h2>
-            <p>Si tiene preguntas sobre esta política de privacidad, contáctenos en:</p>
-            <p><strong>Email:</strong> ruahsoftware@gmail.com</p>
-            <p><strong>Website:</strong> https://ruahsoftware.github.io/site</p>
-            <p>Para eliminar su cuenta y datos de Comunidad, use el botón dentro de la app (ver sección 5) o visite nuestra <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">página de eliminación de cuenta</a>.</p>
+            <p>Si tienes preguntas sobre esta política de privacidad, contáctanos en:</p>
+            <p><strong>Correo:</strong> ruahsoftware@gmail.com</p>
+            <p><strong>Sitio web:</strong> https://ruahsoftware.github.io/site</p>
+            <p>Para eliminar tu cuenta y datos de Comunidad, usa el botón dentro de la app (ver sección 5) o visita nuestra <a href="https://ruahsoftware.github.io/dailyverse/eliminar-cuenta.html" target="_blank" rel="noopener">página de eliminación de cuenta</a>.</p>
         </div>
 
         <div class="footer">
